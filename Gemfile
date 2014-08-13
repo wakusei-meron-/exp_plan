@@ -7,6 +7,12 @@ gem 'rails', '4.1.4'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails', '2.13.1'
+end
+
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
 end
 
 group :production do
