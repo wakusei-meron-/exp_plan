@@ -2,8 +2,11 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'  
   resources :users
+  resources :sessions, only: [:new, :create, :destory]
 
   match '/signup', to: 'users#new', via: 'get'
+  match '/signin', to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
 
   match '/home', to: 'static_pages#home', via: 'get'
   match '/howtouse', to: 'static_pages#howtouse', via: 'get'
