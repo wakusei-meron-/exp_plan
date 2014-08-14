@@ -21,6 +21,8 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'minitest'
   gem 'guard-rspec', '2.5.0'
+  gem 'cucumber-rails', '1.4.0', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 group :production do
